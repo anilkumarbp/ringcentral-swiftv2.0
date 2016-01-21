@@ -1,0 +1,6 @@
+framework module ringcentral {
+  umbrella header "ringcentral-umbrella.h"
+
+  export *
+  module * { export * }
+}

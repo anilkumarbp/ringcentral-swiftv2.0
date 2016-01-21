@@ -1,0 +1,38 @@
+PODS:
+  - CocoaLumberjack (2.2.0):
+    - CocoaLumberjack/Default (= 2.2.0)
+    - CocoaLumberjack/Extensions (= 2.2.0)
+  - CocoaLumberjack/Core (2.2.0)
+  - CocoaLumberjack/Default (2.2.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.2.0):
+    - CocoaLumberjack/Default
+  - CryptoSwift (0.2.2)
+  - PubNub (4.2.4):
+    - CocoaLumberjack (= 2.2.0)
+    - PubNub/Core (= 4.2.4)
+  - PubNub/Core (4.2.4):
+    - CocoaLumberjack (= 2.2.0)
+  - ringcentral (1.0.0):
+    - CryptoSwift
+    - PubNub (~> 4.0)
+
+DEPENDENCIES:
+  - ringcentral (from `https://github.com/anilkumarbp/ringcentral-swiftv2.0.git`)
+
+EXTERNAL SOURCES:
+  ringcentral:
+    :git: https://github.com/anilkumarbp/ringcentral-swiftv2.0.git
+
+CHECKOUT OPTIONS:
+  ringcentral:
+    :commit: 4948e0e40f1f355554b9a82765736652a676b8c4
+    :git: https://github.com/anilkumarbp/ringcentral-swiftv2.0.git
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
+  CryptoSwift: d382228d6301c09474132417878a741c2a2e68cd
+  PubNub: 2e5045d9140d289d41673388b8af615739e8660c
+  ringcentral: efe2b2aa1af3e0f68f49c9546c208c8653abdc5d
+
+COCOAPODS: 0.39.0
