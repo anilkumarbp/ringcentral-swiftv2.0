@@ -42,6 +42,7 @@ $ sudo gem install cocoapods
 
 ```ruby
 
+platform :ios, '8.0'
 use_frameworks!
 
 target 'Your Project Name' do
