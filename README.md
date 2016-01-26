@@ -38,17 +38,21 @@ The RingCentral Swift SDK is a CocoaPod written in Swift 2.0. [CocoaPods](http:/
     $ sudo gem install cocoapods
     ```
 
-2. To integrate RingCentral Swift SDK into your Xcode project, navigate to the directory that contains your project and create a new **Podfile** with `pod init` or open an existing one, then add the following line:
+2. To integrate RingCentral Swift SDK into your Xcode project, navigate to the directory that contains your project and create a new **Podfile** using  
 
     ```ruby
+    $ pod init
+    ```
+    
+    or open an existing one, then add the following lines:
 
+    ```ruby
     platform :ios, '8.0'
     use_frameworks!
 
     target 'Your Project Name' do
     pod 'ringcentral'
     end
-
     ```
 
 3. Then, run the following command to install the RingCentral-Swift SDK:
@@ -75,17 +79,15 @@ The RingCentral SDK is initiated in the following ways.
 
 **Sandbox:**
 ```swift
-    var rcsdk = SDK(appKey: app_key, appSecret: app_secret, server: SDK.RC_SERVER_SANDBOX)
+var rcsdk = SDK(appKey: app_key, appSecret: app_secret, server: SDK.RC_SERVER_SANDBOX)
 ```
 **Production:**
 ```swift
-    var rcsdk = SDK(appKey: app_key, appSecret: app_secret, server: SDK.RC_SERVER_PRODUCTION)
+var rcsdk = SDK(appKey: app_key, appSecret: app_secret, server: SDK.RC_SERVER_PRODUCTION)
 ```
-The 'app_key' and 'app_secret' should be read from a configuration file.
+The `app_key` and `app_secret` should be read from a configuration file.
 
-Depending on the stage of production, either
-**SDK.RC_SERVER_SANDBOX** or **SDK.RC_SERVER_PRODUCTION**
-will be used as the 'server' parameter.
+Depending on the stage of production, either `SDK.RC_SERVER_SANDBOX` or `SDK.RC_SERVER_PRODUCTION` will be used as the 'server' parameter.
 
 # Authorization
 
