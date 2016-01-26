@@ -133,22 +133,21 @@ platform.delete('/account/~/extension/~', query: [])
 
 Attach the following code as a completion handler (**always**) :
 ```swift
-    {
-      (apiresponse,apiexception) in
-
-
-    }
+{
+   (apiresponse,apiexception) in
+   print("The response is:", apiresponse)
+}
 ```
 
 Returning 'data' into a Dictionary (JSON): This is handled by the **ApiResponse** class within the SDK. we can retrieve the dictionary as shown below
 
 NSJSON Serialization handled by **ApiResponse** class :
 ```swift
-  NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: &errors) as! NSDictionary
+NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: &errors) as! NSDictionary
 ```
 Retrieve the dictionary in your application as shown below :
 ```swift
-  apiresponse.getDict()
+apiresponse.getDict()
 ```
 
 For readability of the data
