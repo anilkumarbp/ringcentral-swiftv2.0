@@ -77,16 +77,18 @@ Drag the `src` project into your own and add the resource as an **Embedded Binar
 
 # Initialization
 
-The RingCentral SDK is initiated in the following ways.
+Before you start, import the library into your project.
+```swift
+import ringcentral
+```
+RingCentral SDK is initiated in the following ways.
 
 **Sandbox:**
 ```swift
-import ringcentral
 var rcsdk = SDK(appKey: app_key, appSecret: app_secret, server: SDK.RC_SERVER_SANDBOX)
 ```
 **Production:**
 ```swift
-import ringcentral
 var rcsdk = SDK(appKey: app_key, appSecret: app_secret, server: SDK.RC_SERVER_PRODUCTION)
 ```
 The `app_key` and `app_secret` should be read from a configuration file.
