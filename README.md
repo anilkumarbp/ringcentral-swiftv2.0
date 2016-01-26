@@ -50,7 +50,7 @@ The RingCentral Swift SDK is a CocoaPod written in Swift 2.0. [CocoaPods](http:/
     platform :ios, '8.0'
     use_frameworks!
 
-    target 'Your Project Name' do
+    target 'YourProjectName' do
     pod 'ringcentral'
     end
     ```
@@ -61,6 +61,7 @@ The RingCentral Swift SDK is a CocoaPod written in Swift 2.0. [CocoaPods](http:/
     $ pod install
     ```
 
+open `YourProjectName.xcworkscpace` in Xcode to begin coding.
 
 ### If you do not Use CocoaPods, manually Add Subprojects
 
