@@ -87,7 +87,7 @@ var rcsdk = SDK(appKey: app_key, appSecret: app_secret, server: SDK.RC_SERVER_PR
 ```
 The `app_key` and `app_secret` should be read from a configuration file.
 
-Depending on the stage of production, either `SDK.RC_SERVER_SANDBOX` or `SDK.RC_SERVER_PRODUCTION` will be used as the 'server' parameter.
+Depending on the stage of production, either `SDK.RC_SERVER_SANDBOX` or `SDK.RC_SERVER_PRODUCTION` will be used as the `server` parameter.
 
 # Authorization
 
