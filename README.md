@@ -28,7 +28,7 @@
 # Getting Started
 
 
-### CocoaPods **(recommended)**
+- ### CocoaPods **(recommended)**
 
 The RingCentral Swift SDK is a CocoaPod written in Swift 2.0. [CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. To get started using the RingCentral-Swift SDK, we recommend you add it to your project using CocoaPods.
 
@@ -64,7 +64,7 @@ The RingCentral Swift SDK is a CocoaPod written in Swift 2.0. [CocoaPods](http:/
 4. open `YourProjectName.xcworkscpace` in Xcode to begin coding.
 
 
-### If you do not Use CocoaPods, manually Add Subprojects
+- ### If you do not Use CocoaPods, manually Add Subprojects
 
 You can integrate RingCentral Swift SDK into your project manually without using a dependency manager.
 
