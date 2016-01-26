@@ -97,15 +97,15 @@ Depending on the stage of production, either `SDK.RC_SERVER_SANDBOX` or `SDK.RC_
 
 To authorize the platform, extract the 'Platform' object:
 
-    var platform = rcsdk.platform()
+    var platform = rcsdk.getPlatform()
 
 Once the platform is extracted, call:
 
-    platform.login(username, password: password)
+    platform.login(username: username, password: password)
 
 or (to authorize with extension):
 
-    platform.login(username, ext: ext, password: password)
+    platform.login(username: username, ext: ext, password: password)
 
 The SDK will automatically refresh the token so long the refresh token lives.
 
