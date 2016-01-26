@@ -104,12 +104,17 @@ To authorize the platform, extract the 'Platform' object:
 Once the platform is extracted, call:
 
     platform.login(username: username, password: password)
+    {
+        (completion handler) in
+    }
 
 or (to authorize with extension):
 
     platform.login(username: username, ext: ext, password: password)
+    {
+        (completion handler) in
+    }
 
-The SDK will automatically refresh the token so long the refresh token lives.
 
 *Caution*: If no extension is specified, platform automitically refers extension 101 (default).
 ***
@@ -119,22 +124,19 @@ The SDK will automatically refresh the token so long the refresh token lives.
 Currently all requests can be made through the following:
 
 ```swift
-platform.get('/account/~/extension/~')
+platform.get('/account/~/extension/~') 
 platform.post('/account/~/extension/~', body: [])
-platform.put('/account/~/extension/~', body: [])
-platform.delete('/account/~/extension/~', query: [])
+platform.put('/account/~/extension/~', body: []) 
+platform.delete('/account/~/extension/~', query: []) 
 
 ```
 
 Attach the following code as a completion handler (**always**) :
 ```swift
     {
-      (transaction) in
-        if (error) {
-            // do something for error
-        } else {
-            // continue with code
-        }
+      (apiresponse,apiexception) in
+
+
     }
 ```
 
@@ -146,18 +148,18 @@ NSJSON Serialization handled by **ApiResponse** class :
 ```
 Retrieve the dictionary in your application as shown below :
 ```swift
-  transaction.getDict()
+  apiresponse.getDict()
 ```
 
 For readability of the data
 ```swift
-    println(transaction.getDict())
+    print(apiresponse.getDict())
 ```
 
 # Performing RingOut
 
 RingOut follows a two-legged style telecommunication protocol.
-The following method call is used to send a Ring Out.
+The following method call is used to create a Ring Out.
 ```swift
     platform.post("/account/~/extension/~/ringout", body :
     [ "to": ["phoneNumber": "ToNumber"],
@@ -172,7 +174,7 @@ The following method call is used to send a Ring Out.
 
 # Sending SMS
 
-The follow method call is used to send a SMS.
+The following method call is used to send a SMS.
 ```swift
 platform.post("/account/~/extension/~/sms", body :
     [ "to": [["phoneNumber": "18315941779"]],
