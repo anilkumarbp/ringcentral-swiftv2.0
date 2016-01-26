@@ -153,7 +153,7 @@ Retrieve the dictionary in your application as shown below :
 
 For readability of the data
 ```swift
-    print(apiresponse.getDict())
+print(apiresponse.getDict())
 ```
 
 # Performing RingOut
@@ -161,7 +161,7 @@ For readability of the data
 RingOut follows a two-legged style telecommunication protocol.
 The following method call is used to create a Ring Out.
 ```swift
-    platform.post("/account/~/extension/~/ringout", body :
+platform.post("/account/~/extension/~/ringout", body :
     [ "to": ["phoneNumber": "ToNumber"],
         "from": ["phoneNumber": "FromNumber"],
         "callerId": ["phoneNumber": "CallerId"],
@@ -195,7 +195,7 @@ var subscription = rcsdk.createSubscription()
 
 To add Events to the Subscription Object:
 ```swift
-  subscription.addEvents(
+subscription.addEvents(
     [
         "/restapi/v1.0/account/~/extension/~/presence",
         "/restapi/v1.0/account/~/extension/~/message-store"
