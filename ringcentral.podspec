@@ -18,4 +18,5 @@ spec.exclude_files = "Classes/Exclude"
 spec.requires_arc = true
 spec.dependency 'PubNub', '~>4.0'
 spec.dependency 'CryptoSwift'
+spec.dependency 'SwiftyJSON'
 end

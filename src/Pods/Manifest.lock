@@ -8,10 +8,10 @@ PODS:
   - CocoaLumberjack/Extensions (2.2.0):
     - CocoaLumberjack/Default
   - CryptoSwift (0.2.2)
-  - PubNub (4.2.4):
+  - PubNub (4.2.5):
     - CocoaLumberjack (= 2.2.0)
-    - PubNub/Core (= 4.2.4)
-  - PubNub/Core (4.2.4):
+    - PubNub/Core (= 4.2.5)
+  - PubNub/Core (4.2.5):
     - CocoaLumberjack (= 2.2.0)
   - SwiftyJSON (2.3.2)
 
@@ -23,7 +23,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
   CryptoSwift: d382228d6301c09474132417878a741c2a2e68cd
-  PubNub: 2e5045d9140d289d41673388b8af615739e8660c
+  PubNub: 92c9e3556a5666a597bcf613c72e2e426d3321d4
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

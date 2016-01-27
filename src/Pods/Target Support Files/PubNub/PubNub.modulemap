@@ -8,6 +8,7 @@ framework module PubNub {
   private header "PubNub+PresencePrivate.h"
   private header "PubNub+SubscribePrivate.h"
   private header "PNConfiguration+Private.h"
+  private header "PNKeychain.h"
   private header "PNClientState.h"
   private header "PNHeartbeat.h"
   private header "PNStateListener.h"
