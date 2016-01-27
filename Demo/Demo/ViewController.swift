@@ -14,10 +14,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let app_key: String = ""
-        let app_secret = ""
-        let username = ""
-        let password = ""
+        let app_key: String = "MNJx4H4cTR-02_zPnsTJ5Q"
+        let app_secret = "7CJKigzBTzOvzTDPP1-C3AARDYohOlSaCLcvgzpNZUzw"
+        let username = "15856234190"
+        let password = "sandman1!"
         
         
         let rcsdk = SDK(appKey: app_key, appSecret: app_secret, server: SDK.RC_SERVER_SANDBOX, appName: "Swift_Test_Sample", appVersion: "1.0.0")
@@ -60,25 +60,25 @@ class ViewController: UIViewController {
         
         subscription.register()
             {
-                (apiresponse) in
-                print("Subscribing"+apiresponse.JSONStringify(apiresponse.getDict(), prettyPrinted: true))
-                print("Subscribing",apiresponse.getResponse())
-        }
-        
-        
-        platform.post("/account/~/extension/~/ringout", body :
-            [ "to": ["phoneNumber": "18315941779"],
-                "from": ["phoneNumber": "15856234190"],
-                "callerId": ["phoneNumber": ""],
-                "playPrompt": "true"
-            ])
-            {
                 (apiresponse,apiexception) in
-                print(apiresponse!.JSONStringify(apiresponse!.getDict(), prettyPrinted: true))
+                print("Subscribing",apiresponse!.JSONStringify(apiresponse!.getDict(), prettyPrinted: true))
+                print("Subscribing",apiresponse!.getResponse())
         }
+        
+        
+//        platform.post("/account/~/extension/~/ringout", body :
+//            [ "to": ["phoneNumber": "18315941779"],
+//                "from": ["phoneNumber": "15856234190"],
+//                "callerId": ["phoneNumber": ""],
+//                "playPrompt": "true"
+//            ])
+//            {
+//                (apiresponse,apiexception) in
+//                print(apiresponse!.JSONStringify(apiresponse!.getDict(), prettyPrinted: true))
+//        }
         
         platform.post("/account/~/extension/~/sms", body :
-            [ "to": [["phoneNumber": "18315941779"]],
+            [ "to": [["phoneNumber": "17752204114"]],
                 "from": ["phoneNumber": "15856234190"],
                 "text": "Test"
             ])

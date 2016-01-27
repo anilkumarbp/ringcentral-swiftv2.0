@@ -87,11 +87,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Demo/CocoaLumberjack.framework"
   install_framework "Pods-Demo/CryptoSwift.framework"
   install_framework "Pods-Demo/PubNub.framework"
+  install_framework "Pods-Demo/SwiftyJSON.framework"
   install_framework "Pods-Demo/ringcentral.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Demo/CocoaLumberjack.framework"
   install_framework "Pods-Demo/CryptoSwift.framework"
   install_framework "Pods-Demo/PubNub.framework"
+  install_framework "Pods-Demo/SwiftyJSON.framework"
   install_framework "Pods-Demo/ringcentral.framework"
 fi

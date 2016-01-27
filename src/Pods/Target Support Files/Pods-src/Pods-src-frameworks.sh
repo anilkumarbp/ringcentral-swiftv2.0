@@ -87,9 +87,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-src/CocoaLumberjack.framework"
   install_framework "Pods-src/CryptoSwift.framework"
   install_framework "Pods-src/PubNub.framework"
+  install_framework "Pods-src/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-src/CocoaLumberjack.framework"
   install_framework "Pods-src/CryptoSwift.framework"
   install_framework "Pods-src/PubNub.framework"
+  install_framework "Pods-src/SwiftyJSON.framework"
 fi

@@ -124,8 +124,6 @@ public class MultipartBuilder {
             delimiter = ","
         }
         result = result + "}"
-        
-        print("Body String is :"+result, terminator: "")
         return result
     }
     

@@ -103,16 +103,16 @@ public class Subscription: NSObject, PNObjectEventListener {
     /// Registers for a new subscription or renews an old one
     ///
     /// - parameter options:         List of options for PubNub
-    public func register(options: [String: AnyObject] = [String: AnyObject](), completion: (transaction: ApiResponse) -> Void) {
+    public func register(options: [String: AnyObject] = [String: AnyObject](), completion: (apiresponse: ApiResponse?,exception: NSException?) -> Void) {
         if (isSubscribed()) {
             return renew(options) {
-                (t) in
-                completion(transaction: t)
+                (r,e) in
+                completion(apiresponse: r,exception: e)
             }
         } else {
             return subscribe(options) {
-                (t) in
-                completion(transaction: t)
+                (r,e) in
+                completion(apiresponse: r,exception: e)
             }
         }
     }
@@ -120,19 +120,19 @@ public class Subscription: NSObject, PNObjectEventListener {
     /// Renews the subscription
     ///
     /// - parameter options:         List of options for PubNub
-    public func renew(options: [String: AnyObject], completion: (transaction: ApiResponse) -> Void) {
+    public func renew(options: [String: AnyObject], completion: (apiresponse: ApiResponse?,exception: NSException?) -> Void) {
         
         // include PUT instead of the apiCall
         platform.put("/subscription/" + subscription!.id,
             body: [
                 "eventFilters": getFullEventFilters()
             ]) {
-                (transaction,exception) in
-                let dictionary = transaction!.getDict()
+                (apiresponse,exception) in
+                let dictionary = apiresponse!.getDict()
                 if let _ = dictionary["errorCode"] {
                     self.subscribe(options){
-                        (t) in
-                        completion(transaction: t)
+                        (r,e) in
+                        completion(apiresponse: r,exception: e)
                     }
                 } else {
                     self.subscription!.expiresIn = dictionary["expiresIn"] as! NSNumber
@@ -144,7 +144,7 @@ public class Subscription: NSObject, PNObjectEventListener {
     /// Subscribes to a channel with given events
     ///
     /// - parameter options:         Options for PubNub
-    public func subscribe(options: [String: AnyObject], completion: (transaction: ApiResponse) -> Void) {
+    public func subscribe(options: [String: AnyObject], completion: (apiresponse: ApiResponse?,exception: NSException?) -> Void) {
         
         // Create Subscription
         platform.post("/subscription",
@@ -155,9 +155,9 @@ public class Subscription: NSObject, PNObjectEventListener {
                     "encryption": "false"
                 ]
             ])  {
-                (transaction,exception) in
+                (apiresponse,exception) in
                 
-                let dictionary = transaction!.getDict()
+                let dictionary = apiresponse!.getDict()
                 print("The subscription dictionary is :", dictionary, terminator: "")
                 var sub = ISubscription()
                 sub.eventFilters =      dictionary["eventFilters"] as! [String]

@@ -8,6 +8,7 @@
 
 
 import Foundation
+import SwiftyJSON
 
 
 public class Client {
@@ -39,8 +40,8 @@ public class Client {
     
     /// Generic HTTP request with completion handler
     ///
-    /// - parameter options:         List of options for HTTP request
-    /// - parameter completion:      Completion handler for HTTP request
+    /// @param: options          List of options for HTTP request
+    /// @param: completion:      Completion handler for HTTP request
     /// @resposne: ApiResponse  Callback
     public func send(request: NSMutableURLRequest, completionHandler: (response: ApiResponse?, exception: NSException?) -> Void) {
         
@@ -84,8 +85,6 @@ public class Client {
             request.HTTPMethod = method
             request.HTTPBody = parse["body"]!.dataUsingEncoding(NSUTF8StringEncoding)
             for (key,value) in parse["headers"] as! Dictionary<String, String> {
-                print("key :",key, terminator: "")
-                print("value :",value, terminator: "")
                 request.setValue(value, forHTTPHeaderField: key)
             }
         }
@@ -140,15 +139,15 @@ public class Client {
             }
             else {
                 if let json: AnyObject = body as AnyObject? {
-                    bodyFinal = Util.jsonToString(json as! [String : AnyObject])
-                    truncatedBodyFinal = bodyFinal
+                    let resultJSON = JSON(json)
+                    let result = resultJSON.rawString()!
+                    truncatedBodyFinal = result
                 }
             }
         }
         
         parse["query"] = truncatedQueryFinal
         parse["body"] = truncatedBodyFinal
-        print("The body is :"+truncatedBodyFinal, terminator: "")
         parse["headers"] = [String: [String: String]]()
         // check for Headers
         if headers.count == 1 {

@@ -11,7 +11,6 @@
 		A6D2C6D71C517BF800DB2165 /* src.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D2C6CC1C517BF800DB2165 /* src.framework */; };
 		A6D2C6DC1C517BF800DB2165 /* srcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2C6DB1C517BF800DB2165 /* srcTests.swift */; };
 		A6D2C7061C517E9200DB2165 /* SDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2C6FB1C517E9200DB2165 /* SDK.swift */; };
-		A6D2C7071C517E9200DB2165 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2C6FC1C517E9200DB2165 /* Util.swift */; };
 		A6D2C7081C517E9200DB2165 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2C6FE1C517E9200DB2165 /* ApiResponse.swift */; };
 		A6D2C7091C517E9200DB2165 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2C6FF1C517E9200DB2165 /* Client.swift */; };
 		A6D2C70A1C517E9200DB2165 /* MultiPartBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2C7001C517E9200DB2165 /* MultiPartBuilder.swift */; };
@@ -41,7 +40,6 @@
 		A6D2C6DB1C517BF800DB2165 /* srcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = srcTests.swift; sourceTree = "<group>"; };
 		A6D2C6DD1C517BF800DB2165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6D2C6FB1C517E9200DB2165 /* SDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDK.swift; sourceTree = "<group>"; };
-		A6D2C6FC1C517E9200DB2165 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		A6D2C6FE1C517E9200DB2165 /* ApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		A6D2C6FF1C517E9200DB2165 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		A6D2C7001C517E9200DB2165 /* MultiPartBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiPartBuilder.swift; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				A6D2C6FB1C517E9200DB2165 /* SDK.swift */,
-				A6D2C6FC1C517E9200DB2165 /* Util.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -315,7 +312,6 @@
 				A6D2C7081C517E9200DB2165 /* ApiResponse.swift in Sources */,
 				A6D2C7061C517E9200DB2165 /* SDK.swift in Sources */,
 				A6D2C7091C517E9200DB2165 /* Client.swift in Sources */,
-				A6D2C7071C517E9200DB2165 /* Util.swift in Sources */,
 				A6D2C70B1C517E9200DB2165 /* Auth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -5,6 +5,7 @@ use_frameworks!
 
 target 'Demo' do
 pod 'ringcentral', :git => 'https://github.com/anilkumarbp/ringcentral-swiftv2.0.git'
+pod 'SwiftyJSON'
 end
 
 target 'DemoTests' do

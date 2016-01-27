@@ -16,9 +16,11 @@ PODS:
   - ringcentral (1.0.0):
     - CryptoSwift
     - PubNub (~> 4.0)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - ringcentral (from `https://github.com/anilkumarbp/ringcentral-swiftv2.0.git`)
+  - SwiftyJSON
 
 EXTERNAL SOURCES:
   ringcentral:
@@ -26,7 +28,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   ringcentral:
-    :commit: 4948e0e40f1f355554b9a82765736652a676b8c4
+    :commit: 1915c2591b58e2eda502e94a3f7f203d7acf4151
     :git: https://github.com/anilkumarbp/ringcentral-swiftv2.0.git
 
 SPEC CHECKSUMS:
@@ -34,5 +36,6 @@ SPEC CHECKSUMS:
   CryptoSwift: d382228d6301c09474132417878a741c2a2e68cd
   PubNub: 2e5045d9140d289d41673388b8af615739e8660c
   ringcentral: efe2b2aa1af3e0f68f49c9546c208c8653abdc5d
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

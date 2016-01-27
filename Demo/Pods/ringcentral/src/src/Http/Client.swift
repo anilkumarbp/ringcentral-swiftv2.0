@@ -8,6 +8,7 @@
 
 
 import Foundation
+import SwiftyJSON
 
 
 public class Client {
@@ -140,8 +141,10 @@ public class Client {
             }
             else {
                 if let json: AnyObject = body as AnyObject? {
-                    bodyFinal = Util.jsonToString(json as! [String : AnyObject])
-                    truncatedBodyFinal = bodyFinal
+                    let resultJSON = JSON(json)
+                    let result = resultJSON.rawString()!
+//                    result = Util.jsonToString(json as! [String : AnyObject])
+                    truncatedBodyFinal = result
                 }
             }
         }
