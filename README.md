@@ -38,7 +38,7 @@ The RingCentral Swift SDK is a CocoaPod written in Swift 2.0. [CocoaPods](http:/
     $ sudo gem install cocoapods
     ```
 
-2. To integrate RingCentral Swift SDK into your Xcode project, navigate to the directory that contains your project and create a new **Podfile** using  
+2. To integrate RingCentral Swift SDK into your Xcode project, navigate to the directory that contains your project (.xcworkspace) and create a new **Podfile** using  
 
     ```ruby
     $ pod init
@@ -212,7 +212,7 @@ Please keep in mind that due to limitations of PUBNUB library, which is synchron
 
 ***
 
-# SDK Demo 1
+# SDK Demo : ( w.i.p )
 
 Login page:
     Insert app_key, app_secret, username, password in order to log in.
