@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A637B2271C59954200A2B8B1 /* SDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A637B2261C59954200A2B8B1 /* SDKTests.swift */; };
+		A65192201C5C428100001A83 /* ApiException.swift in Sources */ = {isa = PBXBuildFile; fileRef = A651921F1C5C428100001A83 /* ApiException.swift */; };
+		A67923321C615F9800DC4AC6 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67923311C615F9800DC4AC6 /* Mock.swift */; };
 		A6D2C6D01C517BF800DB2165 /* src.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D2C6CF1C517BF800DB2165 /* src.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6D2C6D71C517BF800DB2165 /* src.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D2C6CC1C517BF800DB2165 /* src.framework */; };
 		A6D2C6DC1C517BF800DB2165 /* srcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2C6DB1C517BF800DB2165 /* srcTests.swift */; };
@@ -17,6 +20,9 @@
 		A6D2C70B1C517E9200DB2165 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2C7021C517E9200DB2165 /* Auth.swift */; };
 		A6D2C70C1C517E9200DB2165 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2C7031C517E9200DB2165 /* Platform.swift */; };
 		A6D2C70D1C517E9200DB2165 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2C7051C517E9200DB2165 /* Subscription.swift */; };
+		A6E0F25E1C5E98FC00326680 /* PlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0F25D1C5E98FC00326680 /* PlatformTests.swift */; };
+		A6E0F2691C5FE8C800326680 /* MockClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0F2681C5FE8C800326680 /* MockClient.swift */; };
+		A6E0F26B1C5FE97E00326680 /* MockRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0F26A1C5FE97E00326680 /* MockRegistry.swift */; };
 		C121C01F43EF973BF69CA07F /* Pods_src.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05D341ABFBBB136F3182145 /* Pods_src.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +39,9 @@
 /* Begin PBXFileReference section */
 		2C27494995EA649E2F09D307 /* Pods-src.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-src.release.xcconfig"; path = "Pods/Target Support Files/Pods-src/Pods-src.release.xcconfig"; sourceTree = "<group>"; };
 		669B752B464E9C1F62A145EA /* Pods-src.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-src.debug.xcconfig"; path = "Pods/Target Support Files/Pods-src/Pods-src.debug.xcconfig"; sourceTree = "<group>"; };
+		A637B2261C59954200A2B8B1 /* SDKTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKTests.swift; sourceTree = "<group>"; };
+		A651921F1C5C428100001A83 /* ApiException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiException.swift; sourceTree = "<group>"; };
+		A67923311C615F9800DC4AC6 /* Mock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
 		A6D2C6CC1C517BF800DB2165 /* src.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = src.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6D2C6CF1C517BF800DB2165 /* src.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = src.h; sourceTree = "<group>"; };
 		A6D2C6D11C517BF800DB2165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +55,9 @@
 		A6D2C7021C517E9200DB2165 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		A6D2C7031C517E9200DB2165 /* Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		A6D2C7051C517E9200DB2165 /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		A6E0F25D1C5E98FC00326680 /* PlatformTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformTests.swift; sourceTree = "<group>"; };
+		A6E0F2681C5FE8C800326680 /* MockClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockClient.swift; sourceTree = "<group>"; };
+		A6E0F26A1C5FE97E00326680 /* MockRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRegistry.swift; sourceTree = "<group>"; };
 		D05D341ABFBBB136F3182145 /* Pods_src.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_src.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -76,6 +88,14 @@
 				2C27494995EA649E2F09D307 /* Pods-src.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A637B2251C59953100A2B8B1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A637B2261C59954200A2B8B1 /* SDKTests.swift */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 		A6D2C6C21C517BF800DB2165 = {
@@ -114,6 +134,9 @@
 		A6D2C6DA1C517BF800DB2165 /* srcTests */ = {
 			isa = PBXGroup;
 			children = (
+				A6E0F25F1C5F142F00326680 /* Mocks */,
+				A6E0F2581C5E96DB00326680 /* Platform */,
+				A637B2251C59953100A2B8B1 /* Core */,
 				A6D2C6DB1C517BF800DB2165 /* srcTests.swift */,
 				A6D2C6DD1C517BF800DB2165 /* Info.plist */,
 			);
@@ -134,6 +157,7 @@
 				A6D2C6FE1C517E9200DB2165 /* ApiResponse.swift */,
 				A6D2C6FF1C517E9200DB2165 /* Client.swift */,
 				A6D2C7001C517E9200DB2165 /* MultiPartBuilder.swift */,
+				A651921F1C5C428100001A83 /* ApiException.swift */,
 			);
 			path = Http;
 			sourceTree = "<group>";
@@ -153,6 +177,25 @@
 				A6D2C7051C517E9200DB2165 /* Subscription.swift */,
 			);
 			path = Subscription;
+			sourceTree = "<group>";
+		};
+		A6E0F2581C5E96DB00326680 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				A6E0F25D1C5E98FC00326680 /* PlatformTests.swift */,
+			);
+			name = Platform;
+			sourceTree = "<group>";
+		};
+		A6E0F25F1C5F142F00326680 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A6E0F2681C5FE8C800326680 /* MockClient.swift */,
+				A6E0F26A1C5FE97E00326680 /* MockRegistry.swift */,
+				A67923311C615F9800DC4AC6 /* Mock.swift */,
+			);
+			name = Mocks;
+			path = ../src;
 			sourceTree = "<group>";
 		};
 		B2309507ECF75DAC0E4DB55B /* Frameworks */ = {
@@ -312,6 +355,7 @@
 				A6D2C7081C517E9200DB2165 /* ApiResponse.swift in Sources */,
 				A6D2C7061C517E9200DB2165 /* SDK.swift in Sources */,
 				A6D2C7091C517E9200DB2165 /* Client.swift in Sources */,
+				A65192201C5C428100001A83 /* ApiException.swift in Sources */,
 				A6D2C70B1C517E9200DB2165 /* Auth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,7 +364,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6E0F2691C5FE8C800326680 /* MockClient.swift in Sources */,
+				A637B2271C59954200A2B8B1 /* SDKTests.swift in Sources */,
+				A6E0F25E1C5E98FC00326680 /* PlatformTests.swift in Sources */,
 				A6D2C6DC1C517BF800DB2165 /* srcTests.swift in Sources */,
+				A6E0F26B1C5FE97E00326680 /* MockRegistry.swift in Sources */,
+				A67923321C615F9800DC4AC6 /* Mock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

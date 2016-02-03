@@ -1,15 +1,25 @@
 //
-//  srcTests.swift
-//  srcTests
+//  PlatformTests.swift
+//  src
 //
-//  Created by Anil Kumar BP on 1/21/16.
+//  Created by Anil Kumar BP on 1/31/16.
 //  Copyright © 2016 Anil Kumar BP. All rights reserved.
 //
 
 import XCTest
 @testable import src
 
-class srcTests: XCTestCase {
+class PlatformTests: XCTestCase {
+    
+    var rcsdk: SDK!
+    var platform: Platform!
+    
+    // Test Case : Mock Class
+    class SDKFake: SDK {
+        func getSDK() {
+
+        }
+    }
     
     override func setUp() {
         super.setUp()
@@ -21,11 +31,9 @@ class srcTests: XCTestCase {
         super.tearDown()
     }
     
-    func test_A() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-//        XCTAssert(Platform.server, <#T##message: String##String#>)
-        print("Testing")
+    func testLogin() {
+        rcsdk
+        
     }
     
     func testPerformanceExample() {

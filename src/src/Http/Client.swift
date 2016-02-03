@@ -32,18 +32,17 @@ public class Client {
     ///
     /// - parameter appName:        The appKey of your app
     /// - parameter appVersion:     The appSecret of your app
-    init(appName: String = "", appVersion: String = "") {
+    public init(appName: String = "", appVersion: String = "") {
         self.appName = appName
         self.appVersion = appVersion
     }
-    
     
     /// Generic HTTP request with completion handler
     ///
     /// @param: options          List of options for HTTP request
     /// @param: completion:      Completion handler for HTTP request
     /// @resposne: ApiResponse  Callback
-    public func send(request: NSMutableURLRequest, completionHandler: (response: ApiResponse?, exception: NSException?) -> Void) {
+    public func send(request: NSMutableURLRequest, completionHandler: (response: ApiResponse?, exception: NSException?) -> Void)  {
         
         let semaphore = dispatch_semaphore_create(0)
         let task: NSURLSessionDataTask = NSURLSession.sharedSession().dataTaskWithRequest(request) {
@@ -62,6 +61,7 @@ public class Client {
             }
             
         }
+
         task.resume()
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
     }

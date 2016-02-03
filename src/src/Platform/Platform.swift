@@ -33,6 +33,8 @@ public class Platform {
     internal var USER_AGENT: String
     
     
+    // Creating an enum
+    
     /// Constructor for the platform of the SDK
     ///
     /// - parameter appKey:      The appKey of your app
@@ -96,9 +98,11 @@ public class Platform {
     ///
     /// **Caution**: Refreshing an accessToken will deplete it's current time, and will
     /// not be appended to following accessToken.
-    public func refresh(completion: (apiresponse: ApiResponse?,apiexception: NSException?) -> Void)  {
+    public func refresh(completion: (apiresponse: ApiResponse?,apiexception: NSException?) -> Void) throws {
         if(!self.auth.refreshTokenValid()){
-            NSException(name: "Refresh token has expired", reason: "reason", userInfo: nil).raise()
+            throw ApiException(apiresponse: nil, error: NSException(name: "Refresh token has expired", reason: "reason", userInfo: nil))
+//             apiexception
+//            throw ApiException(apiresponse: nil, error: NSException(name: "Refresh token has expired", reason: "reason", userInfo: nil))
         }
         requestToken(self.TOKEN_ENDPOINT,body: [
             
@@ -140,13 +144,18 @@ public class Platform {
     /// @param: options             list of options
     /// @response: ApiResponse      Callback
     public func sendRequest(request: NSMutableURLRequest, options: [String: AnyObject]!, completion: (apiresponse: ApiResponse?,apiexception: NSException?) -> Void) {
-        client.send(inflateRequest(request, options: options){
-            (t,e) in
-            completion(apiresponse: t, apiexception: e)
-            }) {
+        do{
+           try client.send(inflateRequest(request, options: options){
                 (t,e) in
                 completion(apiresponse: t, apiexception: e)
+                }) {
+                    (t,e) in
+                    completion(apiresponse: t, apiexception: e)
+                }
+        } catch {
+            print("error")
         }
+
     }
     
     
@@ -198,9 +207,13 @@ public class Platform {
     /// Check if the accessToken is valid
     func ensureAuthentication(completion: (apiresponse: ApiResponse?,exception: NSException?) -> Void) {
         if (!self.auth.accessTokenValid()) {
-            refresh() {
-                (r,e) in
-                completion(apiresponse: r,exception: e)
+            do{
+                try refresh() {
+                    (r,e) in
+                    completion(apiresponse: r,exception: e)
+                }
+            } catch {
+                print("error")
             }
         }
     }
