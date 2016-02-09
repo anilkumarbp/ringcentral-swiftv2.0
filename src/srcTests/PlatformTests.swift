@@ -9,9 +9,9 @@
 import XCTest
 @testable import src
 
-class PlatformTests: XCTestCase {
+class PlatformTests: TestCase {
     
-    var rcsdk: SDK!
+//    var rcsdk: SDK!
     var platform: Platform!
     
     // Test Case : Mock Class
@@ -32,11 +32,12 @@ class PlatformTests: XCTestCase {
     }
     
     func testLogin() {
-        rcsdk
-        
+        rcsdk = self.getSDK()
+        var authData = rcsdk.platform.auth.data()
+        XCTAssertNotNil(authData["access_token"])
     }
     
-    func testPerformanceExample() {
+    override func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock {
             // Put the code you want to measure the time of here.
