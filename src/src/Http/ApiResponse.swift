@@ -28,11 +28,15 @@ public class ApiResponse {
     /// @param: data        Instance of NSData
     /// @param: response    Instance of NSURLResponse
     /// @param: error       Instance of NSError
-    init(request: NSMutableURLRequest, status: Int = 200, data: NSData?, response: NSURLResponse?, error: NSError?) {
+    init(request: NSMutableURLRequest, status: Int = 200, data: NSData?, response: NSURLResponse?=nil, error: NSError?=nil) {
         self.request = request
+        print("ApiRespsone Request is : ", self.request)
         self.data = data
+        print("ApiRespsone data is : ", self.data)
         self.response = response
+        print("ApiRespsone Response is : ", self.response)
         self.error = error
+        print("ApiRespsone Error is : ", self.error)
     }
     
     public func getText() -> String {
@@ -66,7 +70,7 @@ public class ApiResponse {
         //        let errors: NSError?
         do {
             
-            try self.dict = NSJSONSerialization.JSONObjectWithData(self.data!, options: []) as? NSDictionary
+            self.dict = try NSJSONSerialization.JSONObjectWithData(self.data!, options: []) as? NSDictionary
             
         } catch {
             print("error")

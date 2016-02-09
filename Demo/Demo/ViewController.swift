@@ -14,10 +14,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let app_key: String = ""
-        let app_secret = ""
-        let username = ""
-        let password = ""
+        let app_key: String = "MNJx4H4cTR-02_zPnsTJ5Q"
+        let app_secret = "7CJKigzBTzOvzTDPP1-C3AARDYohOlSaCLcvgzpNZUzw"
+        let username = "15856234190"
+        let password = "sandman1!"
 //        let extension = "103"
         
         

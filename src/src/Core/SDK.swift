@@ -8,11 +8,12 @@
 
 import Foundation
 
+
 // Object representation of a Standard Development Kit for RingCentral
 public class SDK {
     
     // Set constants for SANDBOX and PRODUCTION servers.
-    public static var VERSION: String = ""
+    public static var VERSION: String = "1.0.0"
     public static var RC_SERVER_PRODUCTION: String = "https://platform.ringcentral.com"
     public static var RC_SERVER_SANDBOX: String = "https://platform.devtest.ringcentral.com"
     
@@ -22,6 +23,7 @@ public class SDK {
     var client: Client
     var serverVersion: String!
     var versionString: String!
+    var mockRegistry: MockRegistry
     var logger: Bool = false
     
     
@@ -32,8 +34,11 @@ public class SDK {
     /// - parameter server:      Choice of PRODUCTION or SANDBOX
     /// @param: appName     appName ( optional )
     /// @param: appVersion  appVersion ( optional )
-    public init(appKey: String, appSecret: String, server: String, appName: String?="", appVersion: String?="") {
-        self.client = Client()
+    /// @param: useHttpMock usingtheMocks ( optional )
+    public init(appKey: String, appSecret: String, server: String, appName: String?="", appVersion: String?="", useHttpMock: Bool = false) {
+        self.mockRegistry = MockRegistry()
+        self.client = useHttpMock ? MockClient(mockRegistry: self.mockRegistry) : Client()
+//        self.client = Client()
         platform = Platform(client: self.client, appKey: appKey, appSecret: appSecret, server: server, appName: appName!, appVersion: appVersion!)
         self.server = server
     }

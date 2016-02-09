@@ -30,9 +30,13 @@ public class ApiResponse {
     /// @param: error       Instance of NSError
     init(request: NSMutableURLRequest, status: Int = 200, data: NSData?, response: NSURLResponse?, error: NSError?) {
         self.request = request
+        print("ApiRespsone Request is : ", self.request)
         self.data = data
+        print("ApiRespsone data is : ", self.data)
         self.response = response
+        print("ApiRespsone Response is : ", self.response)
         self.error = error
+        print("ApiRespsone Error is : ", self.error)
     }
     
     public func getText() -> String {

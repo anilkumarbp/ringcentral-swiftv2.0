@@ -2,12 +2,12 @@
 //  MockClient.swift
 //  src
 //
-//  Created by Anil Kumar BP on 2/1/16.
+//  Created by Anil Kumar BP on 2/3/16.
 //  Copyright © 2016 Anil Kumar BP. All rights reserved.
 //
 
 import Foundation
-import src
+
 
 
 class MockClient: Client {
@@ -24,7 +24,11 @@ class MockClient: Client {
     
     internal override func send(request: NSMutableURLRequest, completionHandler: (response: ApiResponse?, exception: NSException?) -> Void) {
         
-//        var mock = self.registry.find(request)
+        let semaphore = dispatch_semaphore_create(0)
+        let mock = self.registry.find(request)
+        let apiresponse = ApiResponse(request: request, data: NSKeyedArchiver.archivedDataWithRootObject(mock.response(request)))
+        completionHandler(response:apiresponse, exception: nil)
+        dispatch_semaphore_signal(semaphore)
     }
     
     
