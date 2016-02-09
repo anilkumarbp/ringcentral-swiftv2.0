@@ -1,5 +1,7 @@
 # RingCentral Swift2.0 SDK ( Beta )
 
+
+[![Build Status](https://travis-ci.org/anilkumarbp/ringcentral-swiftv2.0.svg)](https://travis-ci.org/anilkumarbp/ringcentral-swiftv2.0)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/hyperium/hyper/master/LICENSE)
 [![Gem Version](http://img.shields.io/gem/v/cocoapods.svg?style=flat)](http://badge.fury.io/rb/cocoapods)
 
