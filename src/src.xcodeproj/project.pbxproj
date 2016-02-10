@@ -24,6 +24,7 @@
 		A6D2C70C1C517E9200DB2165 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2C7031C517E9200DB2165 /* Platform.swift */; };
 		A6D2C70D1C517E9200DB2165 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2C7051C517E9200DB2165 /* Subscription.swift */; };
 		A6E0F25E1C5E98FC00326680 /* PlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0F25D1C5E98FC00326680 /* PlatformTests.swift */; };
+		A6E725DB1C6B35960022D8F2 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67E38FC1C62B825007389CC /* Mock.swift */; };
 		C121C01F43EF973BF69CA07F /* Pods_src.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05D341ABFBBB136F3182145 /* Pods_src.framework */; };
 /* End PBXBuildFile section */
 
@@ -378,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A637B2271C59954200A2B8B1 /* SDKTests.swift in Sources */,
+				A6E725DB1C6B35960022D8F2 /* Mock.swift in Sources */,
 				A67E39041C62C292007389CC /* TestCase.swift in Sources */,
 				A6E0F25E1C5E98FC00326680 /* PlatformTests.swift in Sources */,
 				A6D2C6DC1C517BF800DB2165 /* srcTests.swift in Sources */,
